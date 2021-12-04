@@ -138,6 +138,5 @@ def get_sf_data():
 def get_bos_data():
     return final_bos_data
 
-
 if __name__ == "__main__":
     app.run(debug=True)
