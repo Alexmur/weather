@@ -21,14 +21,14 @@ const bColor = (temp) => {
     };
 };
 
-const CityContainer = ({data}) => {
+const CityContainer = ({data, updatedTime}) => {
 
     return (
         <div className="CityContainer" style={{background: bColor(data.temp).cityContainer}}>
-            <div className="CityContainer-Message" > {data.message}</div>
-            <div className="CityContainer-City" >{data.city}</div>
+            <div className="CityContainer-City" >{data.name}</div>
             <div className="CityContainer-Temp" >{data.temp}&deg;</div>
-            
+            <div className="CityContainer-Message" > {data.phrase}</div>
+            <div className="CityContainer-Time">{`Updated At: ${updatedTime}`}</div>
         </div>
     );
 };
