@@ -8,8 +8,7 @@ const App = () => {
   return (
 
     <div className="App">
-      <CityContainer data={bridgewater}/>
-      <CityContainer data={sanFrancisco}/>
+
     </div>
 
   );
