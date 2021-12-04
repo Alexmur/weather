@@ -109,20 +109,20 @@ def main():
 
     phrase_side = choose_side_with_phrase(city_1, city_2)
 
-    final_data_dict_1 = {"City Name": city_1, "City Temp": sf_temp, "Phrase": None}
+    final_data_dict_1 = {"name": city_1, "temp": sf_temp, "phrase": None}
 
-    final_data_dict_2 = {"City Name": city_2, "City Temp": bos_temp, "Phrase": None}
+    final_data_dict_2 = {"name": city_2, "temp": bos_temp, "phrase": None}
 
     if phrase_side == city_1:
         if winning_temp == sf_temp:
-            final_data_dict_1["Phrase"] = winning_phrases_sf[score - 1]
+            final_data_dict_1["phrase"] = winning_phrases_sf[score - 1]
         elif winning_temp == bos_temp:
-            final_data_dict_1["Phrase"] = losing_phrases_sf[score - 1]
+            final_data_dict_1["phrase"] = losing_phrases_sf[score - 1]
     elif phrase_side == city_2:
         if winning_temp == bos_temp:
-            final_data_dict_2["Phrase"] = winning_phrases_bos[score - 1]
+            final_data_dict_2["phrase"] = winning_phrases_bos[score - 1]
         elif winning_temp == sf_temp:
-            final_data_dict_2["Phrase"] = losing_phrases_bos[score - 1]
+            final_data_dict_2["phrase"] = losing_phrases_bos[score - 1]
 
     payload = create_payload(final_data_dict_1, final_data_dict_2)
     return payload
