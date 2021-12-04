@@ -127,12 +127,10 @@ def main():
     payload = create_payload(final_data_dict_1, final_data_dict_2)
     return payload
 
-final_data = main()
-
 # data API route
 @app.route("/data")
 def get_data():
-    return final_data
+    return main()
 
 if __name__ == "__main__":
     app.run(debug=True)
